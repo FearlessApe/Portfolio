@@ -1,0 +1,136 @@
+/*Web layout*/
+
+.game-portfolio{
+
+    background-color: #000;
+    color: #0f0;
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.matrix-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+
+}
+
+.cyber-title{
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #0f0;
+    margin: 20px 0;
+}
+
+.cyber-nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom:2px solid #0f0;
+}
+
+.nav-button{
+    background: transparent;
+    border: 2px solid #0f0;
+    color: #0f0;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.nav-button:hover{
+    background: #0f02;
+    box-shadow: 0 0 15px #0f0;
+}
+
+.nav-button.active{
+    background: #0f0;
+    color: #000;
+}
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card{
+    background: rgba(0,15,0,0.8);
+    border: 1px solid #0f0;
+    padding: 20px;
+    position: relative;
+}
+
+/*===========================================
+  Making of the status bars and             /
+  progress                                  /
+                                            /
+============================================*/
+.status-led::before{
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.status-led[data-status="released"]::before{background: #0f0;}
+
+.status-Led[data-status= "In development"]::before{background-color: #ff0;}
+
+.status-led[data-status="Prototype"]::before{background-color: #f00;}
+
+.cyber-button{
+    background: transparent;
+    border: 1px solid #0f0;
+    color: #0f0;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.cyber-button:hover{
+    background: #0f0;
+    color:#000;
+}
+
+.skil-chart{
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.skill-bar{
+    background: #002;
+    height: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.skill-progress{
+    height: 100%;
+    background: linear-gradient(90deg, #0f0, #0f08);
+    position: relative;
+}
+
+.skill-progress::after{
+    content:attr(data-level);
+    position: absolute;
+    right: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+.cyber-footer{
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #0f0;
+    margin-top: 40px;
+}
